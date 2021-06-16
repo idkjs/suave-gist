@@ -1,0 +1,16 @@
+rescript = 1
+rule astj
+  command = /Users/mando/.fnm/node-versions/v14.16.0/installation/lib/node_modules/bs-platform/darwin/bsc.exe -w +A-109-102-41-4-20-44-32 -bs-v 9.0.2  -absname -bs-ast -o $out $i
+o src/Suave.ast : astj ../../src/Suave.re
+rule deps
+  command = /Users/mando/.fnm/node-versions/v14.16.0/installation/lib/node_modules/bs-platform/darwin/bsb_helper.exe -hash 72f44540a9f51fc6523717ec5f890c3c $in
+  restat = 1
+o src/Suave.d : deps src/Suave.ast
+rule mij
+  command = /Users/mando/.fnm/node-versions/v14.16.0/installation/lib/node_modules/bs-platform/darwin/bsc.exe -I src  -w +A-109-102-41-4-20-44-32 -bs-package-name suave-gist -bs-package-output commonjs:$in_d:.bs.js $i
+  dyndep = 1
+  restat = 1
+o src/Suave.cmj src/Suave.cmi ../../src/Suave.bs.js : mij src/Suave.ast
+o src/ExampleApi.ast : astj ../../src/ExampleApi.re
+o src/ExampleApi.d : deps src/ExampleApi.ast
+o src/ExampleApi.cmj src/ExampleApi.cmi ../../src/ExampleApi.bs.js : mij src/ExampleApi.ast

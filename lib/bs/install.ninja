@@ -1,0 +1,14 @@
+rescript = 1
+rule cp
+  command = cp $i $out
+rule touch
+ command = touch $out
+o Suave.cmi : cp ../bs/src/Suave.cmi
+o Suave.cmj : cp ../bs/src/Suave.cmj
+o Suave.cmt : cp ../bs/src/Suave.cmt
+o Suave.re : cp ../../src/Suave.re
+o ExampleApi.cmi : cp ../bs/src/ExampleApi.cmi
+o ExampleApi.cmj : cp ../bs/src/ExampleApi.cmj
+o ExampleApi.cmt : cp ../bs/src/ExampleApi.cmt
+o ExampleApi.re : cp ../../src/ExampleApi.re
+build install.stamp : touch Suave.cmi Suave.cmj ExampleApi.cmi ExampleApi.cmj 

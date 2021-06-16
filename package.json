@@ -1,0 +1,25 @@
+{
+  "name": "suave",
+  "version": "1.0.0",
+  "description": "promises for http",
+  "main": "index.js",
+  "scripts": {
+    "postinstall": "npm link bs-platform"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://gist.github.com/5539011dccf0e634cbbd9e2c8b5147d6.git"
+  },
+  "keywords": [
+    "reason",
+    "rescript",
+    "http",
+    "promise"
+  ],
+  "author": "Reid Evans",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://gist.github.com/5539011dccf0e634cbbd9e2c8b5147d6"
+  },
+  "homepage": "https://gist.github.com/5539011dccf0e634cbbd9e2c8b5147d6"
+}

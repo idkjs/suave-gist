@@ -1,0 +1,19 @@
+{
+  "name": "suave-gist",
+  "sources": [
+    {
+      "dir": "src",
+      "subdirs": true
+    }
+  ],
+  "package-specs": [
+    {
+      "module": "commonjs",
+      "in-source": true
+    }
+  ],
+  "suffix": ".bs.js",
+  "warnings": {
+    "number": "+A-109-102-41-4-20-44-32"
+  }
+}
