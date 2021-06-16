@@ -124,95 +124,6 @@ function error(content) {
   };
 }
 
-var stores = [{
-    number: 2304
-  }];
-
-function partial_arg_0(param) {
-  return $great$eq$great(get, (function (param) {
-                return setStatus(200, stores, param);
-              }), param);
-}
-
-var partial_arg_1 = {
-  hd: (function (param) {
-      return $great$eq$great(post, (function (param) {
-                    return setStatus(200, "posted stores", param);
-                  }), param);
-    }),
-  tl: /* [] */0
-};
-
-var partial_arg = {
-  hd: partial_arg_0,
-  tl: partial_arg_1
-};
-
-function partial_arg$1(param) {
-  return choose(partial_arg, param);
-}
-
-function partial_arg$2(param) {
-  return filter((function (http) {
-                return http.path === "/stores";
-              }), param);
-}
-
-function partial_arg_0$1(param) {
-  return $great$eq$great(get, (function (param) {
-                return setStatus(200, "got items", param);
-              }), param);
-}
-
-var partial_arg_1$1 = {
-  hd: (function (param) {
-      return $great$eq$great(post, (function (param) {
-                    return setStatus(200, "posted items", param);
-                  }), param);
-    }),
-  tl: /* [] */0
-};
-
-var partial_arg$3 = {
-  hd: partial_arg_0$1,
-  tl: partial_arg_1$1
-};
-
-function partial_arg$4(param) {
-  return choose(partial_arg$3, param);
-}
-
-function partial_arg$5(param) {
-  return filter((function (http) {
-                return http.path === "/items";
-              }), param);
-}
-
-function partial_arg_0$2(param) {
-  return $great$eq$great(partial_arg$2, partial_arg$1, param);
-}
-
-var partial_arg_1$2 = {
-  hd: (function (param) {
-      return $great$eq$great(partial_arg$5, partial_arg$4, param);
-    }),
-  tl: {
-    hd: (function (param) {
-        return setStatus(404, "Like Bono, we still haven't found what you're looking for", param);
-      }),
-    tl: /* [] */0
-  }
-};
-
-var partial_arg$6 = {
-  hd: partial_arg_0$2,
-  tl: partial_arg_1$2
-};
-
-function api(param) {
-  return choose(partial_arg$6, param);
-}
-
 exports.pure = pure;
 exports.fail = fail;
 exports.$great$eq$great = $great$eq$great;
@@ -228,6 +139,4 @@ exports.setStatus = setStatus;
 exports.ok = ok;
 exports.notFound = notFound;
 exports.error = error;
-exports.stores = stores;
-exports.api = api;
 /* No side effect */
