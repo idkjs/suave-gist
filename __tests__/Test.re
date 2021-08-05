@@ -63,11 +63,12 @@ describe("Async workflow", () => {
       getToken()
       ->Promise.Js.fromBsPromise
       ->Promise.Js.toResult
+
       ->Promise.map(x =>
           switch (x) {
           | Ok(x) => expect(Obj.magic(x)) |> toBe("some initial data")
           | Error(x) => expect(Obj.magic(x)) |> toBe("some initial data")
-          | _ => fail("Was not Error")
+          // | _ => fail("Was not Error")
           }
         )
       ->Promise.Js.toBsPromise
