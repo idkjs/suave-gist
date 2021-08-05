@@ -1,18 +1,23 @@
 {
   "name": "suave-gist",
   "sources": [
+    "src",
     {
-      "dir": "src",
-      "subdirs": true
+      "dir": "__tests__",
+      "type": "dev"
     }
   ],
-  "package-specs": [
-    {
-      "module": "commonjs",
-      "in-source": true
-    }
-  ],
+  "package-specs": {
+    "module": "commonjs",
+    "in-source": false
+  },
   "suffix": ".bs.js",
+  "bs-dependencies": [
+    "reason-promise"
+  ],
+  "bs-dev-dependencies": [
+    "@glennsl/bs-jest"
+  ],
   "warnings": {
     "number": "+A-109-102-41-4-20-44-32"
   }

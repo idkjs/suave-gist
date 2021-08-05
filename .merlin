@@ -1,8 +1,14 @@
 ####{BSB GENERATED: NO EDIT
-FLG -ppx '/Users/mando/.fnm/node-versions/v14.16.0/installation/lib/node_modules/bs-platform/darwin/bsc.exe -as-ppx '
-S /Users/mando/.fnm/node-versions/v14.16.0/installation/lib/node_modules/bs-platform/lib/ocaml
-B /Users/mando/.fnm/node-versions/v14.16.0/installation/lib/node_modules/bs-platform/lib/ocaml
+FLG -ppx '/Users/mando/Github/suave-gist/node_modules/bs-platform/darwin/bsc.exe -as-ppx '
+S /Users/mando/Github/suave-gist/node_modules/bs-platform/lib/ocaml
+B /Users/mando/Github/suave-gist/node_modules/bs-platform/lib/ocaml
 FLG -w +a-4-9-20-40-41-42-50-61-102+A-109-102-41-4-20-44-32-40-42-61
+S /Users/mando/Github/suave-gist/node_modules/reason-promise/lib/ocaml
+B /Users/mando/Github/suave-gist/node_modules/reason-promise/lib/ocaml
+S /Users/mando/Github/suave-gist/node_modules/@glennsl/bs-jest/lib/ocaml
+B /Users/mando/Github/suave-gist/node_modules/@glennsl/bs-jest/lib/ocaml
+S __tests__
+B lib/bs/__tests__
 S src
 B lib/bs/src
 ####BSB GENERATED: NO EDIT}
