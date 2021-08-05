@@ -33,27 +33,27 @@ type http = {
 let get =
   filter(
     fun
-    | {method: "GET"} => true
+    | {method: "GET",_} => true
     | _ => false,
   );
 
 let put =
   filter(
     fun
-    | {method: "PUT"} => true
+    | {method: "PUT",_} => true
     | _ => false,
   );
 let post =
   filter(
     fun
-    | {method: "POST"} => true
+    | {method: "POST",_} => true
     | _ => false,
   );
 
 let delete =
   filter(
     fun
-    | {method: "DELETE"} => true
+    | {method: "DELETE",_} => true
     | _ => false,
   );
 
